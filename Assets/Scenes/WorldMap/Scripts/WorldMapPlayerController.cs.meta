@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ffb4689f69aed7a41b7ac3931f074459
+timeCreated: 1519490288
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - mara: {fileID: 1931435407512670, guid: 343bc16865fd989458defc6fb224c89c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

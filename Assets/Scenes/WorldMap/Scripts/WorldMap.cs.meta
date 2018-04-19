@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c9826513908006d40a9f22f2688620c4
+timeCreated: 1519079550
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dirt: {fileID: 1730441918342494, guid: b6966940128d8074cb1ca68db1c102b8, type: 2}
+  - grass: {fileID: 1085391013937296, guid: dc9a355c17921914c8c7af2a0d788bc6, type: 2}
+  - forrest: {fileID: 1213486686668624, guid: 11a51bba48d42f94db52025362c33ccf, type: 2}
+  - water: {fileID: 1528106004913546, guid: 995168356ca2a604184bd470b34dcc83, type: 2}
+  - Mara: {fileID: 1931435407512670, guid: 343bc16865fd989458defc6fb224c89c, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
