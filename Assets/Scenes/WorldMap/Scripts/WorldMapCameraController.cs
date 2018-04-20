@@ -16,6 +16,6 @@ public class WorldMapCameraController : MonoBehaviour {
     void LateUpdate()
     {
         // Set the position of the camera's transform to be the same as the player's, but offset by the calculated offset distance.
-        transform.position = GameData.data.playerController.data.position.vector3 + offset;
+        transform.position = GameData.data.playerControllerData.position.vector3 + offset;
     }
 }

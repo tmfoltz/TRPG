@@ -8,9 +8,9 @@ using UnityEngine;
 [System.Serializable]
 public class GameData : MonoBehaviour
 {
-    public WorldMap worldMap;
-    public WorldMapPlayerController playerController;
     public WorldMapPlayerControllerData playerControllerData;
+
+	public WorldMap worldMap;
 
     public static GameData data;
     // Use this for initialization

@@ -1202,7 +1202,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1684656118}
   - component: {fileID: 1684656119}
-  - component: {fileID: 1684656117}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -1210,23 +1209,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1684656117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1684656116}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffb4689f69aed7a41b7ac3931f074459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data:
-    position:
-      x: 3
-      y: 0.25
-      z: 4
-  mara: {fileID: 1931435407512670, guid: 343bc16865fd989458defc6fb224c89c, type: 2}
 --- !u!4 &1684656118
 Transform:
   m_ObjectHideFlags: 0
@@ -1256,6 +1238,7 @@ MonoBehaviour:
   forrest: {fileID: 1213486686668624, guid: 11a51bba48d42f94db52025362c33ccf, type: 2}
   water: {fileID: 1528106004913546, guid: 995168356ca2a604184bd470b34dcc83, type: 2}
   worldMenu: {fileID: 1340163469}
+  mara: {fileID: 1931435407512670, guid: 343bc16865fd989458defc6fb224c89c, type: 2}
 --- !u!1 &1721053372
 GameObject:
   m_ObjectHideFlags: 0

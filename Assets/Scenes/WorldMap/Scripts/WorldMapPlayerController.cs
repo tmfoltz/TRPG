@@ -2,43 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WorldMapPlayerController : MonoBehaviour
+public class WorldMapPlayerController:MonoBehaviour
 {
 
     public TerrainTile terrainTile { get; set; }
     public WorldMapPlayerControllerData data;
-    public GameObject mara;
+	public GameObject mara;
 
-    // Use this for initialization
-    void Start()
-    {
-        if (GameData.data.playerController == null)
-        {
-            GameData.data.playerController = this;
-			if (GameData.data.playerControllerData != null) {
-				this.data = GameData.data.playerControllerData;
-			} else {
-				this.data = GameData.data.playerControllerData;
-			}
-            initalizeMara();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
+	void Start()
+	{
+		if (GameData.data.playerControllerData != null) {
+			this.data = GameData.data.playerControllerData;
+		} else {
+			this.data = GameData.data.playerControllerData;
+		}
+		initalizeMara();
+	}
+		
     public void initalizeMara()
     {
-		this.terrainTile = GameData.data.worldMap.getTerrainTile(data.position);
+		this.terrainTile = WorldMap.worldMap.getTerrainTile(data.position);
         if (terrainTile == null)
         {
-            this.terrainTile = GameData.data.worldMap.getTerrainTile(new Point(3, .25f, 4));
+            this.terrainTile = WorldMap.worldMap.getTerrainTile(new Point(3, .25f, 4));
         }
         updatePosition(terrainTile);
-        mara = (GameObject)UnityEngine.MonoBehaviour.Instantiate(mara, data.position.vector3, Quaternion.identity);
-
-        //terrainTile.mara = this;
     }
 
     private void updatePosition(TerrainTile newTerrain)
@@ -54,7 +42,7 @@ public class WorldMapPlayerController : MonoBehaviour
             if (terrainTile.westTerrain != null)
             {
                 updatePosition(terrainTile.westTerrain);
-                mara.transform.position = data.position.vector3;
+				mara.transform.position = data.position.vector3;
                 //terrainTile.mara = null;
                 terrainTile = terrainTile.westTerrain;
                 //terrainTile.mara = this;
@@ -66,7 +54,7 @@ public class WorldMapPlayerController : MonoBehaviour
             if (terrainTile.northTerrain != null)
             {
                 updatePosition(terrainTile.northTerrain);
-                mara.transform.position = data.position.vector3;
+				mara.transform.position = data.position.vector3;
                 //terrainTile.mara = null;
                 terrainTile = terrainTile.northTerrain;
                 //terrainTile.mara = this;
@@ -78,7 +66,7 @@ public class WorldMapPlayerController : MonoBehaviour
             if (terrainTile.eastTerrain != null)
             {
                 updatePosition(terrainTile.eastTerrain);
-                mara.transform.position = data.position.vector3;
+				mara.transform.position = data.position.vector3;
                 //terrainTile.mara = null;
                 terrainTile = terrainTile.eastTerrain;
                 //terrainTile.mara = this;
@@ -90,7 +78,7 @@ public class WorldMapPlayerController : MonoBehaviour
             if (terrainTile.southTerrain != null)
             {
                 updatePosition(terrainTile.southTerrain);
-                mara.transform.position = data.position.vector3;
+				mara.transform.position = data.position.vector3;
                 //terrainTile.mara = null;
                 terrainTile = terrainTile.southTerrain;
                 //terrainTile.mara = this;

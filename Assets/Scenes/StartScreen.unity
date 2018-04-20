@@ -920,8 +920,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3aeecee32ffcf8409591773819a843f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  worldMap: {fileID: 0}
-  playerController: {fileID: 0}
+  playerControllerData:
+    position:
+      x: 3
+      y: 0.25
+      z: 4
 --- !u!4 &1077826463
 Transform:
   m_ObjectHideFlags: 0

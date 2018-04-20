@@ -14,32 +14,21 @@ public class WorldMap : MonoBehaviour
     public GameObject water;
 
     public GameObject worldMenu;
+	public GameObject mara;
     
+	public static WorldMap worldMap;
     List<List<TerrainTile>> terrain = new List<List<TerrainTile>>();
 
 
     /// <summary>
     /// Use this for initialization
     /// </summary>
-    void Awake()
-    {
-        if (GameData.data.worldMap == null)
-        {
-            GameData.data.worldMap = this;
-            terrain = generateWorldMap();
-            worldMenu.SetActive(false);
-        }
-        else
-        {
-            GameData.data.worldMap.terrain = GameData.data.worldMap.generateWorldMap();
-            //GameData.data.playerController.initalizeMara();
-            GameData.data.worldMap.worldMenu.SetActive(false);
-        }
-    }
-
 	void Start()
 	{
-
+		terrain = generateWorldMap();
+		worldMenu.SetActive(false);
+		mara = (GameObject)UnityEngine.MonoBehaviour.Instantiate(mara, GameData.data.playerControllerData.position.vector3, Quaternion.identity);
+		worldMap = this;
 	}
 
     public TerrainTile getTerrainTile(Point? position)
