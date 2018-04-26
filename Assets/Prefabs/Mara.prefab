@@ -2559,6 +2559,7 @@ MonoBehaviour:
       x: 3
       y: 0.25
       z: 4
+  mara: {fileID: 1931435407512670}
 --- !u!137 &137528076630153162
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

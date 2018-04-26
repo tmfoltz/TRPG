@@ -56,8 +56,8 @@ public class WorldMap : MonoBehaviour
     /// <returns></returns>
     public List<List<TerrainTile>> generateWorldMap()
     {
-        int Width = 40;
-        int Height = 40;
+        int Width = 150;
+        int Height = 150;
 
         //string filePath = @"C:\Users\tmfoltz\Documents\Unity\The Legend of Mara\Assets\Scenes\WorldMap\worldMap.csv";
         string filePath = @"C:\Users\RDCERTMF\Documents\DF\The Legend of Mara\Assets\Scenes\WorldMap\worldMap.csv";
@@ -70,7 +70,9 @@ public class WorldMap : MonoBehaviour
             for (int y = 0; y < Height; y++)
             {
                 string terrainType = data[Width - y - 1][x];
-				float elevation = int.Parse(data[Width - y - 1][x + Width]) * .25f;
+				string value = data [Width - y - 1] [x + Width];
+				Debug.Log (value);
+				float elevation = (float)Math.Round(float.Parse(value)*1.5)/4f;
                 Point point = new Point(x, elevation, y);
                 switch (terrainType)
                 {
@@ -80,7 +82,7 @@ public class WorldMap : MonoBehaviour
                     case "g":
                         terrainTile = new TerrainTile(point, grass, TerrainTypes.Grass, dirt);
                         break;
-                    case "d":
+                    case "m":
                         terrainTile = new TerrainTile(point, dirt, TerrainTypes.Dirt, dirt);
                         break;
                     case "f":
